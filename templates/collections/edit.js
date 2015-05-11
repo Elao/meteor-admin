@@ -39,7 +39,7 @@ Template.collections_edit.helpers({
         return function (collection, id) {
             var doc = collection.findOne(id);
 
-            if (confirm('Really delete "' + doc.__toString() + '" ?')) {
+            if (confirm('Really delete "' + doc + '" ?')) {
                 this.remove();
             }
         };
