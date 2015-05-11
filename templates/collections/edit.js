@@ -35,4 +35,14 @@ Template.collections_edit.helpers({
             }
         };
     },
+    beforeRemove: function () {
+        return function (collection, id) {
+            var doc = collection.findOne(id);
+
+            if (confirm('Really delete "' + doc.__toString() + '" ?')) {
+                this.remove();
+            }
+        };
+    }
+
 });
