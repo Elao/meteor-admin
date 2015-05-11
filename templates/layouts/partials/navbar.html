@@ -1,0 +1,16 @@
+<template name="admin_navbar">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a href="{{pathFor 'admin_dashboard'}}" class="navbar-logo">{{title}}</a>
+
+            <div class="page-title">
+                {{> yield 'breadcrumb'}}
+                <span class="current">{{>yield 'title'}}</span>
+            </div>
+            <a href="#" class="mobile-nav-toggle"><span class="line-1"></span><span class="line-2"></span><span class="line-3"></span></a>
+            <div class="list-actions">
+                {{> yield 'navbar_buttons'}}
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,55 @@
+<template name="paginator">
+    <div class="col-sm-6">
+        <strong>{{count}}</strong> résultats
+        {{> per_page_selector}}
+    </div>
+    <div class="col-sm-6 text-right">
+        {{> pagination}}
+    </div>
+</template>
+
+<template name="pagination">
+    {{#if hasPagination}}
+        <nav>
+            <ul class="pagination">
+
+                <li>
+                    {{#if previous}}
+                        <a href="{{link_to previous}}">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    {{else}}
+                        <span class="disabled" aria-hidden="true">&laquo;</span>
+                    {{/if}}
+                </li>
+
+                {{#each links}}
+                    <li class="{{activeClass ..}}">
+                        <a href="{{link_to this}}">{{this}}</a>
+                    </li>
+                {{/each}}
+
+                <li>
+                    {{#if next}}
+                        <a href="{{link_to next}}">
+                            <span>&raquo;</span>
+                        </a>
+                    {{else}}
+                        <span class="disabled" aria-hidden="true">&raquo;</span>
+                    {{/if}}
+                </li>
+            </ul>
+        </nav>
+    {{/if}}
+</template>
+
+<template name="per_page_selector">
+    <span class="lighter">
+        <select class="selector selector-sm">
+            {{#each links}}
+                <option {{selected ..}} value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+        résultats par page.
+    </span>
+</template>

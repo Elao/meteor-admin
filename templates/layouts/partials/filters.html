@@ -1,0 +1,24 @@
+<template name="filters">
+    {{> UI.contentBlock}}
+</template>
+
+<template name="filters_button">
+    <a
+        href="#"
+        id="filters_button"
+        class="filters-button has-tooltip collapsed"
+        data-toggle="collapse"
+        data-target="#filters"
+        aria-expanded="false"
+        title="Filters"
+        data-placement="left"
+    >
+        <i class="elaostrap-font-filters"></i>
+    </a>
+</template>
+
+<template name="filters_badges">
+    {{#each this}}
+        <span class="label">{{key}} : <em>{{value}}</em></span>
+    {{/each}}
+</template>

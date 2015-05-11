@@ -1,0 +1,88 @@
+//
+@import ".meteor/local/build/programs/server/assets/packages/elao_meteor-elaostrap/lib/admin";
+@import ".meteor/local/build/programs/server/assets/packages/elao_meteor-elaostrap/template/layout";
+
+div.admin {
+    .main-content > .container{
+        padding-top: 0;
+    }
+
+    ul.notifications{
+        cursor: pointer;
+        position: fixed;
+    }
+
+    #loading {
+      background: rgba(200, 200, 200, 0.5);
+    }
+
+    .fake-nav-tabs{
+        &.fixed{
+            position: fixed;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.952941);
+
+            &+.tab-content{
+                margin-top: 4em;
+            }
+        }
+
+        margin: 0 -15px;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid #d0d2cc;
+
+        & > li {
+            display: table-cell;
+            width: 1%;
+            float: none;
+            border-bottom: 2px solid #d0d2cc;
+
+            &:hover{
+                border-bottom-color: #707255;
+            }
+            &.active{
+                border-bottom-color: #F34141;
+
+                a{
+                    color: #F34141;
+                }
+            }
+
+            a {
+                padding: 1em 0;
+                display: block;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+
+    table.admin_list{
+        tr:hover{
+            cursor: pointer;
+        }
+    }
+
+    form#admin_update{
+        button[type='submit']{
+            font-family: 'FontAwesome';
+
+            &:before{
+                content: '\f00c';
+            }
+        }
+    }
+
+    .btn.admin_remove{
+        float: right;
+        top: -60px;
+        position: relative;
+
+        &:before{
+            font-family: 'FontAwesome';
+            content: '\f1f8';
+            margin-right: 10px;
+        }
+    }
+}

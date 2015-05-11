@@ -1,0 +1,20 @@
+<template name="admin_layout">
+    <div class="loading admin">
+        <a href="#" class="scroll-to-top">&uarr;</a>
+
+        {{> notifications}}
+        {{> yield 'navbar'}}
+        {{> yield 'sidebar'}}
+
+        <div class="main-content">
+            {{> yield 'filters'}}
+
+            <div class="container">
+                <div class="list-actions-mobile"></div>
+                <div class="page-title-mobile"></div>
+
+                {{> yield}}
+            </div>
+        </div>
+    </div>
+</template>
