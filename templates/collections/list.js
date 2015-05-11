@@ -1,5 +1,11 @@
 Template.collections_list.helpers({
     items: function(){
+        var collection = ElaoAdmin.config.collections[this.collection];
+
+        if (collection !== undefined) {
+            return collection.find();
+        }
+
         return [];
     },
     breadcrumb: function(){
