@@ -2,6 +2,9 @@
 
 The `elao:meteor-admin` package needs `elao:meteor-elaostrap`, `iron:router` and `gfk:notifications` packages.
 
+### Tools
+There is a tool to generate default scaffolding (Schema + Collection + Publications + Templates) : see https://github.com/Elao/meteor-admin-generator
+
 ### Principes
 - admin dashboard is accessible on `/admin` (`ElaoAdmin.config.router.route_prefix` param)
 - to create a collection list `trucs` (path /admin/trucs) :
