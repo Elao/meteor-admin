@@ -1,6 +1,6 @@
 Package.describe({
     name: 'elao:meteor-admin',
-    version: '0.0.1',
+    version: '0.0.2',
     summary: 'Elao admin for Meteor',
     git: 'https://github.com/Elao/meteor-admin',
     documentation: 'README.md'
