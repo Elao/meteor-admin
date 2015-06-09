@@ -1,6 +1,6 @@
 Package.describe({
     name: 'elao:meteor-admin',
-    version: '0.0.3',
+    version: '0.0.4',
     summary: 'Elao admin for Meteor',
     git: 'https://github.com/Elao/meteor-admin',
     documentation: 'README.md'
@@ -12,7 +12,7 @@ Package.onUse(function(api) {
     api.imply([
         'iron:router@1.0.7',
         'gfk:notifications@1.0.11',
-        'elao:meteor-elaostrap@0.0.4',
+        'elao:meteor-elaostrap@0.0.5',
         'fortawesome:fontawesome@4.2.0',
     ], 'client');
 
