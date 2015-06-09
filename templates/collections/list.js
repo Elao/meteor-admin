@@ -15,7 +15,9 @@ Template.collections_list.helpers({
 
 Template.collections_list.events({
     'click tr': function(e, t){
-        Router.go('admin_edit', {collection: t.data.collection, id: this._id});
+        if ("A" !== e.target.tagName) {
+            Router.go('admin_edit', {collection: t.data.collection, id: this._id});
+        }
     },
 });
 
